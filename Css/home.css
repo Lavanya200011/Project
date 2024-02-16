@@ -1,0 +1,232 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    
+  
+    
+    
+    
+    
+    .container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+}
+   
+     ul{
+  margin:0;
+  padding:0;
+}
+     
+     header{
+  background:;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:80px;
+  border-bottom:#e8491d 3px solid;
+}
+     
+    header a{
+  color:black;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+  font-weight:bold;
+} 
+     
+   header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}  
+     
+     header #branding{
+  float:left;
+}
+     
+   header #branding h1{
+  margin:0;
+}  
+      
+
+header nav{
+  float:right;
+  margin-top:4px;
+}
+
+
+header .highlight, header .current a{
+  color:black;
+  font-weight:bold;
+}
+
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+}
+ 
+.position{
+    position:fixed;
+} 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    .menu-tabs {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu-tabs li {
+      display: inline-block;
+      margin-left: 15px;
+      font-weight: ;
+    }
+
+    .logo {
+      height: 48px;
+      width:48px;
+      
+    }
+
+    .anchor {
+      text-decoration: none;
+      color: black;
+    }
+
+    hr {
+      margin-top: 10px;
+    }
+
+    /* Media Query for mobile devices */
+    @media only screen and (max-width: 600px) {
+      header {
+        text-align: center;
+      }
+
+      .menu-tabs {
+        text-align: center;
+      }
+
+      .menu-tabs li {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+    
+    
+    
+
+    
+
+    .big-image {
+         background-image: url('puppy.jpeg');  /* Replace with the actual image path */
+      background-size: cover;
+      background-position: center;
+      height: 400px; /* Adjust as needed */
+      position: relative;
+      color: white;
+      text-align: left;
+      padding: 20px;
+    }
+
+    .welcome-message {
+      font-size: 24px;
+      margin-bottom: 20px;
+      margin-top: 200px;
+    }
+
+    .contact-us-button {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      
+    }
+    
+       .anchor{
+    color:black;
+    font-size:larger;
+    border-style:solid;
+   padding:4px;
+   text-decoration:none;
+}
+
+.right-tab{
+    margin-right:44px;
+    margin-left:280px
+}
+
+.right-tab-a{
+    margin-right:120px;
+}
+
+
+.hr-lines{
+  position: relative;
+  max-width: 500px;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.hr-lines:before{
+  content:" ";
+  height: 2px;
+  width: 130px;
+  background: red;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 42px;
+}
+
+.hr-lines:after{
+  content:" ";
+  height: 2px;
+  width: 130px;
+  background: red;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 42px;
+}
+
+.down-what{
+    margin-bottom: px;
+}
+
+.info-logo{
+    width:80px;
+    margin-left:80px;
+}
+
+.info-logo-down{
+    margin-left:64px;
+}
+
+
+
+
+.footer{
+    background-color:#FF634B71;
+    
+}

@@ -1,0 +1,138 @@
+
+body {
+    background-color: #90EE90;
+}
+
+
+container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+}
+   
+     ul{
+  margin:0;
+  padding:0;
+}
+     
+     header{
+  background:;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:80px;
+  border-bottom:#e8491d 3px solid;
+}
+     
+    header a{
+  color:black;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+  font-weight:bold;
+} 
+     
+   header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}  
+     
+     header #branding{
+  float:left;
+}
+     
+   header #branding h1{
+  margin:0;
+}  
+      
+
+header nav{
+  float:right;
+  margin-top:4px;
+}
+
+
+header .highlight, header .current a{
+  color:black;
+  font-weight:bold;
+}
+
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+}
+ 
+.position{
+    position:fixed;
+}
+
+
+
+
+
+
+.profile-img{
+	
+	margin-left:12px;
+	border-style:ridge;
+	border-width:12px
+
+}
+
+.font-side-image{
+
+	color:blue;
+	font-size:44px;
+
+
+}
+
+.display-text-image{
+
+display:flex;
+
+}
+
+.adopt-button{
+	background-color:orange;
+	margin-top:240px;
+	margin-bottom:150px;
+
+	padding-left:12px;
+	padding-right:12px;
+	border-radius:8px;
+	border-width:2px;
+}
+
+
+
+
+<!--Information section--!>
+
+
+.second-section{
+
+	background-color:red;
+	margin-right:px;
+
+}
+
+.go-button{
+
+	background-color:orange;
+	border-style:ridge;
+        border-radius:4px;
+	padding-left:20px;
+        padding-right:20px;
+	margin-left:990px;
+	margin-right:360px;
+
+	
+
+}
+
+

@@ -1,0 +1,110 @@
+body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #container {
+      display: flex;
+      height: 100vh;
+    }
+
+    #left-section {
+      background-color: lightblue;
+      width: 20%;
+      padding: 20px;
+    }
+
+    .logo {
+      height: 120px; /* Adjust as needed */
+      width: 100%;
+      border-radius: 12px;
+      
+      
+    }
+
+    #menu-tabs {
+      display: flex;
+      flex-direction: column;
+      
+     
+    }
+
+    .menu-tab {
+      padding: px;
+      margin-bottom: 10px;
+      background-color: lightblue;
+      cursor: pointer;
+      
+     
+    }
+
+    #right-section {
+      background-color: lightblue;
+      width: 100%;
+      padding: 20px;
+      border:solid;
+    }
+
+    fieldset {
+      margin: 60px 40px;
+      padding: 20px;
+      border: 2px solid #000;
+      display: flex;
+    }
+
+    .column {
+      flex: 1;
+      margin-right: 20px;
+      border:solid;
+      margin-top: 12px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    .image {
+      height: 60px; /* Adjust as needed */
+      width: 100%; /* Adjust as needed */
+     border-radius: 50%;
+   
+    }
+
+    .description {
+      margin-top: 80px;
+    }
+
+.image-correct{
+      margin-top:115px;
+      padding-bottom:120px ;
+}
+
+
+
+ /* approval disapproval button */
+ 
+.flex-button{
+    display:flex;
+}
+
+.left-button{
+    left:2px;
+}
+
+.right-button{
+    right:2px;
+}
+
+
+
+
+            /*  Admin history */
+
+
+.fieldset-adjust{
+    padding:0px;
+    margin-right: 280px;
+}
