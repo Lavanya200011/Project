@@ -1,0 +1,170 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management for Teachers</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script defer>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+<!--login chech and hide teachers access content -->
+  function checkLoginButtonVisibility() {
+    const loginBtn = document.getElementById('loginbtn');
+    const teacherAcc = document.getElementById('teacheracc');
+
+    if (loginBtn && loginBtn.offsetParent !== null) {
+      // loginbtn is visible
+      teacherAcc.style.display = 'none';
+    } else {
+      // loginbtn is hidden or removed
+      teacherAcc.style.display = 'block';
+    }
+  }
+
+  // Run on page load
+  window.addEventListener('DOMContentLoaded', checkLoginButtonVisibility);
+
+  // Optional: run repeatedly in case visibility changes later (e.g. by JS)
+  setInterval(checkLoginButtonVisibility, 500); // checks every 500ms
+
+
+
+
+
+
+  </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-800 text-white">
+  <!-- Navbar -->
+  <nav class="bg-white text-black px-4 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-4">
+        <img src="kcem.png" alt="Logo" class="h-16 w-16">
+        <span class="font-bold text-lg">KCEM</span>
+      </div>
+      <div class="hidden md:flex space-x-6">
+        <a href="#" class="hover:text-blue-600">Home Page</a>
+        <a href="#" class="hover:text-blue-600">College Website</a>
+        <a href="#" class="hover:text-blue-600">Contact Us</a>
+        <a href="#" class="hover:text-blue-600">More Links</a>
+      </div>
+      <div class="hidden md:block">
+        <?php if (!$isLoggedIn): ?>
+          <a href="login.html" class="bg-black text-white px-4 py-2 rounded" id="loginbtn">Login</a>
+        <?php else: ?>
+          <a href="logout.php" class="bg-red-600 text-white px-4 py-2 rounded">Logout</a>
+        <?php endif; ?>
+      </div>
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden mt-4 px-4 space-y-2">
+      <a href="#" class="block hover:text-blue-600">Home Page</a>
+      <a href="#" class="block hover:text-blue-600">College Website</a>
+      <a href="#" class="block hover:text-blue-600">Contact Us</a>
+      <a href="#" class="block hover:text-blue-600">More Links</a>
+      <?php if (!$isLoggedIn): ?>
+        <a href="login.php" class="block bg-black text-white px-4 py-2 mt-2 rounded">Sign Up/Login</a>
+      <?php else: ?>
+        <a href="logout.php" class="block bg-red-600 text-white px-4 py-2 mt-2 rounded">Logout</a>
+      <?php endif; ?>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-16 px-4">
+    <p class="text-sm tracking-wide uppercase text-gray-300">Attendance</p>
+    <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4">KCEM Attendance Management</h1>
+    <p class="text-gray-300 max-w-2xl mx-auto">Our platform allows teachers to easily input attendance records. Additionally, they can generate attendance reports in PDF format for their records.</p>
+
+    <div class="grid md:grid-cols-3 gap-8 mt-12 px-4 md:px-20">
+      <div class="bg-gray-900 p-6 rounded-lg">
+        <div class="text-3xl mb-4">🚹</div>
+        <h3 class="text-xl font-semibold mb-2">Total Boys</h3>
+        <p class="text-gray-400">300</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg relative">
+        <div class="text-3xl mb-4">🚺</div>
+        <h3 class="text-xl font-semibold mb-2">Total Girls</h3>
+        <p class="text-gray-400">300</p>
+      </div>
+      <div class="bg-gray-900 p-6 rounded-lg">
+        <div class="text-3xl mb-4">🧑🏻‍🎓</div>
+        <h3 class="text-xl font-semibold mb-2">Total Students</h3>
+        <p class="text-gray-400">600</p>
+      </div>
+    </div>
+
+    <br><br>
+
+    <?php if ($isLoggedIn): ?>
+      <div>
+        <a href="attendance_info.php" class="bg-white text-black px-6 py-2 rounded border hover:bg-blue-200">Check your Attendance info</a>
+      </div>
+      <div id="teacheracc" class="mt-10 flex justify-center space-x-6">
+        <a href="GiveAttendance.html" class="ml-6 bg-white text-black px-6 py-2 rounded border hover:bg-blue-200">Input Attendance</a>
+        <a href="get_report.php" class="bg-white text-black px-6 py-2 rounded border hover:bg-blue-200">Get Attendance info <br> report</a>
+      </div>
+    <?php endif; ?>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-black py-10 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+      <div>
+        <img src="attendance1.jpg" alt="" class="h-48 max-w-65">
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Other Information</h4>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Other Information</h4>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-2">Other Information</h4>
+        <ul class="text-sm space-y-1">
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+          <li><a href="#" class="hover:text-blue-600">xxxxxx</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 mt-10">
+      <p>&copy; 2025 KCEM. All rights reserved.</p>
+      <div class="space-x-4 mt-2">
+        <a href="#" class="hover:underline">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
