@@ -1,0 +1,43 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(animeimg1.jpg);
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            border-radius:12px;
+            background-color: #ffffff87;
+            margin-top:40px;
+
+        }
+        input[type="text"],input[type="number"],input[type="password"],input[type="email"]{
+            width: 95%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        #sign-up{
+            text-align: center;
+           
+        }
+        #sendOtpButton{
+            
+            width: 30%;
+            box-align: right;
+            background-color: rgb(3,155,0);
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: rgb(3,155,0);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+
+        }
+        #send-otp{
+            width: 30%;
+        }

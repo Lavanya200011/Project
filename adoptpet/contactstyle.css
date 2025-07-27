@@ -1,0 +1,64 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('payment_history.jpg');
+  background-size: cover;
+  
+}
+
+.container {
+  width: 600px; /* Adjusted container size */
+  height: 400px;
+  margin: 150px 80px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  float: left;
+}
+
+h1 {
+  text-align: center;
+  color: #009900; /* Green color */
+}
+
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+input[type="email"],input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 200px;
+  padding: 10px;
+  background-color: #009900; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #007700; /* Darker green color on hover */
+}

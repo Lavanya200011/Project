@@ -1,0 +1,274 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav {
+    background-color: rgb(3,155,0);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+}
+.profile-info {
+    text-align: left; /* Align text to the left */
+    margin-top: 20px; /* Adjust as needed */
+}
+.profile-info h2 {
+    margin-bottom: 10px;
+    color: #333; /* Darken text color */
+}
+.info-box {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 10px; /* Add space between boxes */
+}
+.info-box p {
+    margin: 5px 0; /* Add some margin to separate lines */
+}
+.profile-image {
+    border-radius: 50%; /* Make it round */
+    overflow: hidden; /* Hide overflow for perfect circle */
+    width: 200px; /* Set width */
+    height: 200px; /* Set height */
+    margin: 0 auto 20px; /* Center horizontally and add margin bottom */
+    position: relative; 
+/* Add position relative for absolute positioning of upload elements */
+    
+    
+}
+.profile-image img {
+    width: 100%; /* Make image fill container */
+    height: 100%; /* Make image fill container */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+.upload-form {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.upload-form input[type="file"] {
+    display: none; /* Hide the file input */
+}
+.upload-form label {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+.upload-form label:hover {
+    background-color: #0056b3;
+}
+.upload-form button {
+    background-color:  #0056b3;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+        .camera-icon {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin: 10px 0;
+}
+.dropdown {
+    position:absolute;
+    top: 10px; /* Align with the top of the container */
+    left: 10px; /* Align with the left side of the container */
+    z-index: 1;
+    width:60%;
+}
+.dropdown-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s ease;
+    color: #007BFF; /* Initial color */
+}
+.dropdown-btn:hover {
+    text-decoration: underline;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left:0px; /* Adjust the left position to align with the dropdown button */
+    background-color: rgb(3,155,0);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+    width: 95%;
+    animation: slide-down 0.3s ease; /* Dropdown animation */
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.profile-info {
+    text-align: left; /* Align text to the left */
+    margin-top: 20px; /* Adjust as needed */
+}
+.profile-info h2 {
+    margin-bottom: 10px;
+    color: #333; /* Darken text color */
+}
+.info-box {
+    background-color: #f9f9f9; /* Light gray background */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Add some padding */
+    margin-bottom: 10px; /* Add space between boxes */
+}
+.info-box p {
+    margin: 5px 0; /* Add some margin to separate lines */
+}
+.profile-image {
+    border-radius: 50%; /* Make it round */
+    overflow: hidden; /* Hide overflow for perfect circle */
+    width: 200px; /* Set width */
+    height: 200px; /* Set height */
+    margin: 0 auto 20px; /* Center horizontally and add margin bottom */
+}
+.profile-image img {
+    width: 100%; /* Make image fill container */
+    height: 100%; /* Make image fill container */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+.inbox-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Dropdown animation keyframes */
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container{
+width:80%;
+margin:auto;
+overflow:hidden;
+font: 15px/1.5 Arial, Helvetica,sans-serif;
+}
+
+ul{
+margin:0;
+padding:0;
+}
+
+header{
+
+color:#ffffff;
+padding-top:30px;
+min-height:80px;
+border-bottom:#e8491d 3px solid;
+}
+
+header a{
+color:black;
+text-decoration:none;
+text-transform: uppercase;
+font-size:16px;
+font-weight:bold;
+} 
+
+header li{
+float:left;
+display:inline;
+padding: 0 20px 0 20px;
+}  
+
+header #branding{
+float:left;
+}
+
+header #branding h1{
+margin:0;
+}  
+
+
+header nav{
+float:right;
+margin-top:4px;
+}
+
+
+header .highlight, header .current a{
+color:black;
+font-weight:bold;
+}
+
+
+header a:hover{
+color:#cccccc;
+font-weight:bold;
+}
+
+
+
+.info-edit {
+text-align: center;
+margin-top: 20px;
+}
+
+.info-edit button {
+padding: 10px 20px;
+margin: 0 10px;
+font-size: 16px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#edit {
+background-color: #0cdf64;
+color: #fff;
+}
+
+#save {
+background-color:  #0cdf64;
+color: #fff;
+align-items: center;
+
+}
+
+

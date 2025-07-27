@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("dogs.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+.container {
+    flex: 1; 
+    max-width: 50%; 
+    margin: 5% auto; 
+    padding: 20px;
+    background-color: #ffffffa5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.429);
+}
+
+.slidecontainer {
+    flex: 1; 
+    max-width: 50%; 
+    margin: 5% auto; 
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #ffffffbd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.429);
+}
+
+
+
+
+.form-box {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36x;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    padding: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    width: 93%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select {
+        font-size: 14px;
+    }
+
+    .button {
+        font-size: 16px;
+    }
+}
+.dob
+
+/* Style the button container */
+.button {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Style the button */
+.button button {
+    background-color: rgb(3, 155, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Add hover effect */
+.button button:hover {
+    background-color: rgb(5, 62, 11);
+}
+
+
+

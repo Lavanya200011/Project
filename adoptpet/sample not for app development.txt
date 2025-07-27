@@ -1,0 +1,185 @@
+ // method to update the table data
+    private void updateTable(String serial, String monthudp, String collectionudp, String loanudp) {
+        boolean rowUpdated = false;
+
+        // Check if the name already exists in the table
+        ViewGroup tableLayout;
+        for (int i = 1; i < tableLayout.getChildCount(); i++) { // Skip header row
+            TableRow row = (TableRow) tableLayout.getChildAt(i);
+            TextView nameCell = (TextView) row.getChildAt(0);
+            if (nameCell.getText().toString().equalsIgnoreCase(serial)) {
+                // Update existing row
+                ((TextView) row.getChildAt(1)).setText(serial);
+                ((TextView) row.getChildAt(2)).setText(monthudp);
+                ((TextView) row.getChildAt(3)).setText(collectionudp);
+                ((TextView) row.getChildAt(3)).setText(loanudp);
+
+                rowUpdated = true;
+                break;
+            }
+        }
+
+        if (!rowUpdated) {
+            // Add a new row if name does not exist
+            TableRow newRow = new TableRow(this);
+            newRow.addView(createTextView(serial));
+            newRow.addView(createTextView(monthudp));
+            newRow.addView(createTextView(collectionudp));
+            newRow.addView(createTextView(loanudp));
+            tableLayout.addView(newRow);
+        }
+
+        saveTableData(); // Save updated data
+    }
+
+
+
+
+
+
+
+ @Override
+        public void onClick(View v) {
+
+            serialNumberInput.setVisibility(View.VISIBLE);
+            monthUpdate.setVisibility(View.VISIBLE);
+            collectionUpdate.setVisibility(View.VISIBLE);
+            loanUpdate.setVisibility(View.VISIBLE);
+
+
+            String serial = serialNumberInput.getText().toString().trim();
+            String monthudp = monthUpdate.getText().toString().trim();
+            String collectionudp = collectionUpdate.getText().toString().trim();
+            String loanudp = loanUpdate.getText().toString().trim();
+
+            if (serial.isEmpty() || monthudp.isEmpty() || collectionudp.isEmpty() || loanudp.isEmpty()) {
+                Toast.makeText(NextActivity.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+            } else {
+                updateTable(monthudp, collectionudp, loanudp);
+            }
+        }
+
+
+
+
+
+// Method to Reset Fields
+    private void resetFields() {
+        contributionInput.setText("");
+        extraAmountInput.setText("");
+        loanGivedInput.setText("");
+        serialNumberInput.setText("");
+        monthUpdate.setText("");
+        collectionUpdate.setText("");
+        loanUpdate.setText("");
+    }
+
+    // Method to Open Calculator
+    private void openCalculator() {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_APP_CALCULATOR);
+        try {
+            startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, "No Calculator App Found!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+
+
+
+
+
+ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true">
+
+        <TableLayout
+            android:id="@+id/dataTable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"
+            android:padding="8dp">
+
+            <!-- Table Header Row -->
+            <TableRow
+                android:background="@android:color/holo_blue_light"
+                android:backgroundTint="@color/table"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="S.No"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/mad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Month And Date"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Collection (₹)"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/ra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loan Gived (₹)"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+            <!-- Sample Data Row (You will add rows dynamically in Java) -->
+            <TableRow android:padding="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feb 2025"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹1100"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹5000"
+                    android:padding="8dp"
+                    android:layout_weight="1"/>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
